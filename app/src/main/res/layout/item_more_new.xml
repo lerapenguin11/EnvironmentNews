@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="96dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="78dp"
+        android:layout_height="80dp"
+        app:cardCornerRadius="12dp"
+        android:backgroundTint="#f8f8ec"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="78dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="12dp"
+            android:backgroundTint="#f8f8ec">
+
+            <ImageView
+                android:id="@+id/icon_more_new"
+                android:layout_width="78dp"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:preserveLegacyExternalStorage="true"
+                android:requestLegacyExternalStorage="true"
+                android:scaleType="fitXY"
+                tools:srcCompat="@drawable/ic_tip1" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F5F5F5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_more_new"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color2"
+        android:textSize="14sp"
+        android:fontFamily="@font/inter_semibold"
+        android:layout_marginStart="15dp"
+        android:lineHeight="20dp"
+        tools:text="Planting Tree: Plant one tree for a million benefits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

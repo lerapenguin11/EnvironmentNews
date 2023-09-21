@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Environment News</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ecology">Ecology</string>
+    <string name="tips_for_preserving_the_ecology_of_the_environment">Tips for preserving the ecology of the environment</string>
+    <string name="next">Next</string>
+    <string name="read_the_tips_and_help_make_the_environment_more_environmentally_friendly">Read the tips and help make the environment more environmentally friendly</string>
+    <string name="home">Home</string>
+    <string name="save">Save</string>
+    <string name="featured_tips">Featured Tips</string>
+    <string name="popular_tips">Popular Tips</string>
+    <string name="more_news">More News</string>
 </resources>
