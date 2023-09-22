@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.environmentnews.MainActivity
 import com.example.environmentnews.R
 import com.example.environmentnews.business.database.AppDatabase
 import com.example.environmentnews.business.model.Favorite
@@ -63,7 +64,17 @@ class SaveFragment : Fragment(), FavListener {
     }
 
     override fun getFavorite(fav: Favorite) {
-        //открыть детали
+        val bundle = Bundle()
+        bundle.putInt("title", fav.title)
+        bundle.putInt("description", fav.description)
+        bundle.putInt("icon", fav.icon)
+        bundle.putInt("id", fav.id)
+
+        val transaction = activity?.supportFragmentManager?.beginTransaction()
+        val fragment = DetailsNewFragment()
+        fragment.arguments = bundle
+        transaction?.replace(R.id.main_layout, fragment)
+        transaction?.commit()
     }
 
     override fun getFavoriteDelete(fav: Favorite) {
@@ -75,5 +86,10 @@ class SaveFragment : Fragment(), FavListener {
                 )
             }
         })
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as MainActivity).showBottomNavigationView()
     }
 }

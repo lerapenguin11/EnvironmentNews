@@ -2,6 +2,7 @@ package com.example.environmentnews
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.environmentnews.databinding.ActivityMainBinding
 import com.example.environmentnews.presentation.FirstOnBoardingFragment
 import com.example.environmentnews.presentation.HomeFragment
@@ -27,8 +28,18 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.home -> replaceFragmentMain(HomeFragment())
                 R.id.save -> replaceFragmentMain(SaveFragment())
+
+                else -> hideBottomNavigationView()
             }
             true
         }
+    }
+
+    fun hideBottomNavigationView() {
+        binding.bottomNavigationView.visibility = View.GONE
+    }
+
+    fun showBottomNavigationView() {
+        binding.bottomNavigationView.visibility = View.VISIBLE
     }
 }

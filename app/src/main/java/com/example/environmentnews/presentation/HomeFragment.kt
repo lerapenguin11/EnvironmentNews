@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.environmentnews.MainActivity
 import com.example.environmentnews.R
 import com.example.environmentnews.business.database.AppDatabase
 import com.example.environmentnews.business.model.Constants
@@ -51,7 +52,17 @@ class HomeFragment : Fragment(), NewListener {
         setDataPopularTips()
         observeDataNew()
 
+        binding.constraintLayout2.setOnClickListener {
+            openDetailsPopularTips(Constants.getPopularTips().id, Constants.getPopularTips().title,
+                Constants.getPopularTips().icon, Constants.getPopularTips().description)
+        }
+
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as MainActivity).showBottomNavigationView()
     }
 
     private fun observeDataNew() {
@@ -66,6 +77,20 @@ class HomeFragment : Fragment(), NewListener {
     private fun setDataPopularTips() {
         binding.iconTipPopular.setImageResource(Constants.getPopularTips().icon)
         binding.tvTitlePopularTip.setText(Constants.getPopularTips().title)
+    }
+
+    private fun openDetailsPopularTips(id: Int, title: Int, icon: Int, description: Int) {
+        val bundle = Bundle()
+        bundle.putInt("title", title)
+        bundle.putInt("description", description)
+        bundle.putInt("icon", icon)
+        bundle.putInt("id", id)
+
+        val transaction = activity?.supportFragmentManager?.beginTransaction()
+        val fragment = DetailsNewFragment()
+        fragment.arguments = bundle
+        transaction?.replace(R.id.main_layout, fragment)
+        transaction?.commit()
     }
 
     private fun observeDataFeaturedTips() {

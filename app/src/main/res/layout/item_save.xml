@@ -53,6 +53,8 @@
         android:paddingEnd="15dp"
         android:paddingStart="15dp"
         android:lineHeight="25dp"
+        android:maxLines="2"
+        android:ellipsize="end"
         app:layout_constraintEnd_toStartOf="@+id/ic_delete_save"
         app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="parent" />

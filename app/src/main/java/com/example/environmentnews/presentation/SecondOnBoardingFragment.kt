@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.environmentnews.MainActivity
 import com.example.environmentnews.databinding.FragmentSecondOnBoardingBinding
 import com.example.environmentnews.utilits.replaceFragmentMain
 
@@ -22,5 +23,10 @@ class SecondOnBoardingFragment : Fragment() {
         binding.btNext.setOnClickListener { replaceFragmentMain(HomeFragment()) }
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as MainActivity).hideBottomNavigationView()
     }
 }

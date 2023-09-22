@@ -9,12 +9,14 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.example.environmentnews.MainActivity
 import com.example.environmentnews.R
 import com.example.environmentnews.business.database.AppDatabase
 import com.example.environmentnews.business.model.Favorite
 import com.example.environmentnews.business.repos.MoreNewRepository
 import com.example.environmentnews.databinding.FragmentDetailsNewBinding
 import com.example.environmentnews.databinding.FragmentHomeBinding
+import com.example.environmentnews.utilits.replaceFragmentMain
 import com.example.environmentnews.viewmodel.FavoriteViewModel
 import com.example.environmentnews.viewmodel.FavoriteViewModelFactory
 import com.example.environmentnews.viewmodel.NewViewModel
@@ -59,18 +61,8 @@ class DetailsNewFragment : Fragment() {
         newViewModel.isNewsFavorite(newId = newId!!).observe(viewLifecycleOwner, Observer {isFavorite ->
             if(isFavorite){
                 binding.btSave.setImageResource(R.drawable.ic_save_click)
-                binding.btSave.setOnClickListener {
-                    binding.btSave.setImageResource(R.drawable.ic_save_not_click)
-
-                    //allFavorite add
-                    favoriteViewModel.viewModelScope.launch {
-                        favoriteViewModel.deleteFavorite(
-                            favorite = Favorite(newsId = newId, icon = displayIcon,
-                            title = displayTitle, description = displayDescription )
-                        )
-                    }
-                }
-            } else {
+            }
+            else {
                 binding.btSave.setOnClickListener {
                     favoriteViewModel.viewModelScope.launch {
                         favoriteViewModel.insertFavorite(
@@ -84,10 +76,13 @@ class DetailsNewFragment : Fragment() {
             }
         })
 
-        binding.btSave.setOnClickListener {
-
-        }
+        binding.imageView4.setOnClickListener { replaceFragmentMain(HomeFragment()) }
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as MainActivity).hideBottomNavigationView()
     }
 }

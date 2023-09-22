@@ -30,11 +30,11 @@ Overall, the development of agriculture and farming technology has revolutionize
     <string name="popular_title">Waste Management: Caring for environmental health</string>
     <string name="popular_desc">Waste management is a crucial aspect of caring for environmental health. As the world\'s population continues to grow and consumption rates increase, proper waste management becomes even more important. It involves the collection, transportation, processing, and disposal of waste materials in a way that minimizes their impact on the environment.
 
-One of the key goals of waste management is to reduce the amount of waste generated. This can be achieved through various strategies, such as promoting recycling and composting. Recycling allows materials such as paper, plastic, glass, and metal to be reused, reducing the need for raw materials and decreasing the energy required for manufacturing. Composting, on the other hand, involves the decomposition of organic waste into nutrient-rich soil, which can be used for gardening and agriculture.
+One of the key goals of waste management is to reduce the amount of waste generated. This can be achieved through various strategies, such as promoting recycling and composting. Recycling allows materials such as paper, plastic, glass, and metal to be reused, reducing the need for raw materials and decreasing the energy required for manufacturing. Composting, on the other hand, involves the decomposition of organic waste into nutrient-rich soil, which can be used for gardening and agriculture.\n
 
 Proper waste disposal is another crucial aspect of waste management. Landfills are commonly used for disposing of non-recyclable and non-compostable waste. However, modern waste management practices aim to minimize the use of landfills and instead focus on alternative methods such as waste-to-energy plants. These plants convert waste into energy through processes like incineration or anaerobic digestion, reducing the volume of waste and generating electricity or heat in the process.
 
-Waste management also involves the safe handling and treatment of hazardous waste. Hazardous waste includes materials that are toxic, flammable, corrosive, or reactive. Improper disposal of hazardous waste can have severe consequences on human health and the environment. Therefore, it is crucial to have proper regulations and systems in place to ensure its safe collection, transportation, and treatment.
+Waste management also involves the safe handling and treatment of hazardous waste. Hazardous waste includes materials that are toxic, flammable, corrosive, or reactive. Improper disposal of hazardous waste can have severe consequences on human health and the environment. Therefore, it is crucial to have proper regulations and systems in place to ensure its safe collection, transportation, and treatment.\n
 
 In addition to reducing waste generation and proper disposal, waste management also involves raising awareness and educating the public about the importance of responsible waste management practices. Encouraging individuals to reduce, reuse, and recycle can significantly contribute to preserving the environment and maintaining its health for future generations.
 
@@ -43,18 +43,22 @@ In conclusion, waste management plays a vital role in caring for environmental h
 
     <!--More New-->
     <string name="new_title1">Planting Tree: Plant one tree for a million benefits</string>
-    <string name="new_desc1">Trees are living creatures that play an important role in our lives and the environment. Planting a tree is not only an act of caring for nature, but also an investment in the future. One planted tree can bring us many benefits that extend far beyond its physical form.
+    <string name="new_desc1">Trees are living creatures that play an important role in our lives and the environment. Planting a tree is not only an act of caring for nature, but also an investment in the future. One planted tree can bring us many benefits that extend far beyond its physical form.\n
 
-One of the main arguments in favor of planting trees is their ability of oxygen formation. Trees absorb carbon dioxide and release oxygen, which makes them indispensable for maintaining balance in the atmosphere. They are natural filters that improve the quality of the air we breathe. Thanks to trees, the level of air pollution can be reduced, which has a positive effect on the health of people and animals.
+One of the main arguments in favor of planting trees is their ability of oxygen formation. Trees absorb carbon dioxide and release oxygen, which makes them indispensable for maintaining balance in the atmosphere. They are natural filters that improve the quality of the air we breathe. Thanks to trees, the level of air pollution can be reduced, which has a positive effect on the health of people and animals.\n
 
 Trees also play an important role in climate regulation. They create natural barriers from strong winds and protect from the negative effects of sunlight. In addition, they help to conserve water in the soil and prevent erosion. Trees also contribute to the cooling of the environment, which is especially important in urban areas where temperatures can be higher due to urban heat.
 
-In addition to environmental benefits, trees also offer economic benefits. Growing trees improve the appearance of the environment and increase the value of real estate. Studies show that the presence of green spaces around a home or workplace can increase its value and attractiveness to buyers or tenants. In addition, trees create shade and help reduce air conditioning costs during the hot summer months.
+In addition to environmental benefits, trees also offer economic benefits. Growing trees improve the appearance of the environment and increase the value of real estate. Studies show that the presence of green spaces around a home or workplace can increase its value and attractiveness to buyers or tenants. In addition, trees create shade and help reduce air conditioning costs during the hot summer months.\n
 
 But planting trees is not only the responsibility of the state or organizations, it is an action that each of us can perform. Even one planted tree can have a huge impact on the environment and our lives. We can start by planting a tree in our garden, on a plot or even on a balcony. Each tree has the potential to bring a million benefits, including air improvement, climate regulation and economic benefits.
 
 So let\'s turn our planet into a greener and healthier place to live together. Plant a tree and get a million benefits!</string>
     <string name="tips_you_can_return_to_at_any_time">Tips you can return to at any time</string>
     <string name="detail">Detail</string>
+    <string name="temperature">Temperature</string>
+    <string name="water">Water</string>
+    <string name="weather">Weather</string>
+    <string name="description">Description</string>
     <!--More New-->
 </resources>
