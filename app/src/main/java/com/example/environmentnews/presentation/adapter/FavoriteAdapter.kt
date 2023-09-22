@@ -8,8 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.environmentnews.R
 import com.example.environmentnews.business.model.Favorite
+import com.example.environmentnews.presentation.adapter.listener.FavListener
 
-class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>() {
+class FavoriteAdapter(private val openDetailListener : FavListener,
+                      private val deleteFavListener : FavListener) : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>() {
 
     val favoriteList = mutableListOf<Favorite>()
 
@@ -27,6 +29,9 @@ class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>
         holder.description.setText(favorite.description)
         holder.icon.setImageResource(favorite.icon)
         holder.title.setText(favorite.title)
+        holder.itemView.setOnClickListener { openDetailListener.getFavorite(favorite) }
+
+        holder.btDelete.setOnClickListener { deleteFavListener.getFavoriteDelete(favorite) }
     }
 
     fun setItem(fav : List<Favorite>){
@@ -39,5 +44,6 @@ class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>
         val icon : ImageView = view.findViewById(R.id.icon_new_save)
         val title : TextView = view.findViewById(R.id.tv_save_title)
         val description : TextView = view.findViewById(R.id.tv_save_desc)
+        val btDelete : ImageView = view.findViewById(R.id.ic_delete_save)
     }
 }

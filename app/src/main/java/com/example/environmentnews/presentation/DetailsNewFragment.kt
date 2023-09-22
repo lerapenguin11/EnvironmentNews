@@ -56,11 +56,22 @@ class DetailsNewFragment : Fragment() {
 
         val newId = arguments?.getInt("id")
 
-        binding.btSave.setOnClickListener {
-            newViewModel.isNewsFavorite(newId = newId!!).observe(viewLifecycleOwner, Observer {isFavorite ->
-                if(isFavorite){
-                    Toast.makeText(context, "Новость уже добавлена в избранное!!!", Toast.LENGTH_SHORT).show()
-                } else {
+        newViewModel.isNewsFavorite(newId = newId!!).observe(viewLifecycleOwner, Observer {isFavorite ->
+            if(isFavorite){
+                binding.btSave.setImageResource(R.drawable.ic_save_click)
+                binding.btSave.setOnClickListener {
+                    binding.btSave.setImageResource(R.drawable.ic_save_not_click)
+
+                    //allFavorite add
+                    favoriteViewModel.viewModelScope.launch {
+                        favoriteViewModel.deleteFavorite(
+                            favorite = Favorite(newsId = newId, icon = displayIcon,
+                            title = displayTitle, description = displayDescription )
+                        )
+                    }
+                }
+            } else {
+                binding.btSave.setOnClickListener {
                     favoriteViewModel.viewModelScope.launch {
                         favoriteViewModel.insertFavorite(
                             favorite = Favorite(
@@ -70,7 +81,11 @@ class DetailsNewFragment : Fragment() {
                         )
                     }
                 }
-            })
+            }
+        })
+
+        binding.btSave.setOnClickListener {
+
         }
 
         return binding.root
