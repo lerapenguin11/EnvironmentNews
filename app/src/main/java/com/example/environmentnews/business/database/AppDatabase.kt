@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.environmentnews.business.model.Favorite
 import com.example.environmentnews.business.model.MoreNew
 
-@Database(entities = [MoreNew::class, Favorite::class], version = 2)
+@Database(entities = [MoreNew::class, Favorite::class], version = 3)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun newDao(): MoreNewDao
     abstract fun favoriteDao(): FavoriteDao
@@ -21,7 +21,7 @@ abstract class AppDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "new_database_2"
+                    "new_database_3"
                 ).build()
                 INSTANCE = instance
                 instance

@@ -9,8 +9,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.environmentnews.R
 import com.example.environmentnews.business.model.FeaturedTipsModel
+import com.example.environmentnews.presentation.adapter.listener.FeaturedListener
 
-class FeaturedTipsAdapter : RecyclerView.Adapter<FeaturedTipsAdapter.FeaturedTipsViewHolder>() {
+class FeaturedTipsAdapter(private val listener : FeaturedListener) : RecyclerView.Adapter<FeaturedTipsAdapter.FeaturedTipsViewHolder>() {
 
     private val featuredTipsList = mutableListOf<FeaturedTipsModel>()
 
@@ -27,6 +28,7 @@ class FeaturedTipsAdapter : RecyclerView.Adapter<FeaturedTipsAdapter.FeaturedTip
 
         holder.title.setText(featuredTips.title)
         holder.icon.setImageResource(featuredTips.icon)
+        holder.itemView.setOnClickListener { listener.getFeaturedTips(featuredTips) }
     }
 
     @SuppressLint("NotifyDataSetChanged")

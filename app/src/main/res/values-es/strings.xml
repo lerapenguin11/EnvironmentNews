@@ -1,21 +1,21 @@
 <resources>
-    <string name="app_name">Environment News</string>
+    <string name="app_name">Noticias ambientales</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="ecology">Ecology</string>
-    <string name="tips_for_preserving_the_ecology_of_the_environment">Tips for preserving the ecology of the environment</string>
-    <string name="next">Next</string>
-    <string name="read_the_tips_and_help_make_the_environment_more_environmentally_friendly">Read the tips and help make the environment more environmentally friendly</string>
-    <string name="home">Home</string>
-    <string name="save">Save</string>
-    <string name="featured_tips">Featured Tips</string>
-    <string name="popular_tips">Popular Tips</string>
-    <string name="more_news">More News</string>
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="ecology">Ecología</string>
+    <string name="tips_for_preserving_the_ecology_of_the_environment">Consejos para preservar la ecología del medio ambiente</string>
+    <string name="next">Próximo</string>
+    <string name="read_the_tips_and_help_make_the_environment_more_environmentally_friendly">Lea los consejos y ayude a que el medio ambiente sea más amigable para el medio ambiente</string>
+    <string name="home">Hogar</string>
+    <string name="save">Ahorrar</string>
+    <string name="featured_tips">Consejos destacados</string>
+    <string name="popular_tips">Consejos populares</string>
+    <string name="more_news">Mas noticias</string>
 
     <!--Featured Tips-->
-    <string name="featured_title1">Modern Farming Plants</string>
-    <string name="featured_temp1">32°C</string>
-    <string name="featured_weather1">Light Rain</string>
+    <string name="featured_title1">Plantas agrícolas modernas</string>
+    <string name="featured_temp1">32 ° C</string>
+    <string name="featured_weather1">Lluvia ligera</string>
     <string name="featured_water1">85%</string>
     <string name="featured_description1">Various types of modern farming methods used nowadays include agribusiness and intensive farming techniques. These methods have significantly contributed to increasing farming productivity.
 
@@ -25,9 +25,9 @@ Additionally, advanced farming technology also includes the use of specialized t
 
 Overall, the development of agriculture and farming technology has revolutionized the way farming is conducted, leading to higher productivity, improved efficiency, and more sustainable practices.</string>
 
-    <string name="featured_title2">Outomatic Recycling</string>
-    <string name="featured_temp2">20°C</string>
-    <string name="featured_weather2">Light Rain</string>
+    <string name="featured_title2">Reciclaje outomático</string>
+    <string name="featured_temp2">20 ° C</string>
+    <string name="featured_weather2">Lluvia ligera</string>
     <string name="featured_water2">80%</string>
     <string name="featured_description2">Automatic recycling is a revolutionary concept that aims to streamline and simplify the recycling process. With traditional recycling methods, individuals are responsible for sorting their waste into different categories, such as paper, plastic, and glass. However, automatic recycling takes this burden off our shoulders and replaces it with intelligent technology.
 
@@ -39,9 +39,9 @@ After the waste is sorted, it is sent to recycling facilities where it undergoes
 
 In conclusion, automatic recycling is a game-changer in the world of waste management. It simplifies the recycling process, reduces the burden on individuals, and improves the efficiency of recycling facilities. With this technology, we can move towards a more sustainable future, where recycling is not only easy but also highly effective in reducing our environmental footprint.</string>
 
-    <string name="featured_title3">Love Indentify Plant</string>
-    <string name="featured_temp3">26°C</string>
-    <string name="featured_weather3">Light Rain</string>
+    <string name="featured_title3">Amor de la planta</string>
+    <string name="featured_temp3">26 ° C</string>
+    <string name="featured_weather3">Lluvia ligera</string>
     <string name="featured_water3">89%</string>
     <string name="featured_description3">Love Identify Plant is a fascinating app that has revolutionized the way we interact with nature. With just a few clicks, this app can identify any plant species, making it a valuable tool for both amateur and professional botanists.
 
@@ -55,7 +55,7 @@ In conclusion, Love Identify Plant has revolutionized the way we engage with pla
     <!--Featured Tips-->
 
     <!--Popular Tips-->
-    <string name="popular_title">Waste Management: Caring for environmental health</string>
+    <string name="popular_title">Gestión de residuos: cuidado de la salud ambiental</string>
     <string name="popular_desc">Waste management is a crucial aspect of caring for environmental health. As the world\'s population continues to grow and consumption rates increase, proper waste management becomes even more important. It involves the collection, transportation, processing, and disposal of waste materials in a way that minimizes their impact on the environment.
 
 One of the key goals of waste management is to reduce the amount of waste generated. This can be achieved through various strategies, such as promoting recycling and composting. Recycling allows materials such as paper, plastic, glass, and metal to be reused, reducing the need for raw materials and decreasing the energy required for manufacturing. Composting, on the other hand, involves the decomposition of organic waste into nutrient-rich soil, which can be used for gardening and agriculture.\n
@@ -70,7 +70,7 @@ In conclusion, waste management plays a vital role in caring for environmental h
     <!--Popular Tips-->
 
     <!--More New-->
-    <string name="new_title1">Planting Tree: Plant one tree for a million benefits</string>
+    <string name="new_title1">Árbol de plantación: plante un árbol para un millón de beneficios</string>
     <string name="new_desc1">Trees are living creatures that play an important role in our lives and the environment. Planting a tree is not only an act of caring for nature, but also an investment in the future. One planted tree can bring us many benefits that extend far beyond its physical form.\n
 
 One of the main arguments in favor of planting trees is their ability of oxygen formation. Trees absorb carbon dioxide and release oxygen, which makes them indispensable for maintaining balance in the atmosphere. They are natural filters that improve the quality of the air we breathe. Thanks to trees, the level of air pollution can be reduced, which has a positive effect on the health of people and animals.\n
@@ -83,7 +83,7 @@ But planting trees is not only the responsibility of the state or organizations,
 
 So let\'s turn our planet into a greener and healthier place to live together. Plant a tree and get a million benefits!</string>
 
-    <string name="new_title2">Factory 2022: Recycling Place Factory in Malang</string>
+    <string name="new_title2">Factory 2022: Reciclaje de fábrica de fábrica en Malang</string>
     <string name="new_desc2">The Factory 2022: Recycling Place Factory in Malang is an innovative project that aims to tackle the growing problem of waste management in Indonesia. Located in the city of Malang, this factory is set to become a hub for recycling and sustainable practices, making a significant impact on the environment and the local community.
 
 The factory is equipped with state-of-the-art recycling technology that can process various types of waste, including plastic, paper, glass, and metal. This advanced machinery ensures that the waste is properly sorted, cleaned, and transformed into reusable materials. By recycling these materials, the factory reduces the amount of waste that ends up in landfills, helping to alleviate the strain on the environment.
@@ -93,7 +93,7 @@ One of the unique aspects of the Factory 2022 is its focus on community involvem
 In addition to recycling, the Factory 2022 also promotes the use of renewable energy sources. Solar panels and wind turbines have been installed on the factory premises to generate clean and sustainable energy. This reduces the factory\'s reliance on fossil fuels, further minimizing its carbon footprint and contributing to a greener future.
 
 Overall, the Factory 2022: Recycling Place Factory in Malang is a commendable initiative that demonstrates the potential for sustainable waste management practices. By combining advanced recycling technology, community involvement, and renewable energy sources, this factory sets a positive example for other industries and communities. It is a step towards a more sustainable future, where waste is seen as a valuable resource rather than a burden on the environment.</string>
-    <string name="new_title3">Reduce Pollution on Earth by planting trees around us</string>
+    <string name="new_title3">Reducir la contaminación en la tierra plantando árboles a nuestro alrededor</string>
     <string name="new_desc3">Planting trees is a simple yet powerful way to reduce pollution on Earth and improve the overall health of our planet. Trees play a crucial role in absorbing carbon dioxide, a major greenhouse gas responsible for climate change. By planting trees around us, we can help mitigate the effects of pollution and create a healthier environment for future generations.
 
 One of the main benefits of trees is their ability to absorb carbon dioxide and release oxygen through the process of photosynthesis. This helps to reduce the levels of greenhouse gases in the atmosphere, which in turn helps to combat climate change. Trees also act as natural air filters, trapping pollutants such as nitrogen dioxide, sulfur dioxide, and particulate matter. By planting trees in urban areas, we can significantly improve air quality and reduce the harmful effects of pollution on human health.
@@ -105,10 +105,10 @@ Planting trees also has numerous social and economic benefits. Trees provide sha
 In conclusion, planting trees is a simple yet effective way to reduce pollution on Earth. By absorbing carbon dioxide, filtering the air, preventing soil erosion, and improving water quality, trees play a crucial role in creating a healthier and more sustainable planet. It is essential for individuals, communities, and governments to recognize the importance of tree planting and take action to preserve and expand our green spaces. Together, we can make a significant impact on reducing pollution and ensuring a better future for generations to come.</string>
     <!--More New-->
 
-    <string name="tips_you_can_return_to_at_any_time">Tips you can return to at any time</string>
-    <string name="detail">Detail</string>
-    <string name="temperature">Temperature</string>
-    <string name="water">Water</string>
-    <string name="weather">Weather</string>
-    <string name="description">Description</string>
+    <string name="tips_you_can_return_to_at_any_time">Consejos a los que puede volver en cualquier momento</string>
+    <string name="detail">Detalle</string>
+    <string name="temperature">Temperatura</string>
+    <string name="water">Agua</string>
+    <string name="weather">Clima</string>
+    <string name="description">Descripción</string>
 </resources>

@@ -1,10 +1,8 @@
 package com.example.environmentnews.presentation
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.example.environmentnews.MainActivity
 import com.example.environmentnews.databinding.FragmentSecondOnBoardingBinding
 import com.example.environmentnews.utilits.replaceFragmentMain
@@ -19,6 +17,11 @@ class SecondOnBoardingFragment : Fragment() {
     ): View? {
 
         _binding = FragmentSecondOnBoardingBinding.inflate(inflater, container, false)
+
+        val window: Window = requireActivity().window
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.setStatusBarColor(requireActivity().resources.getColor(com.example.environmentnews.R.color.background))
 
         binding.btNext.setOnClickListener { replaceFragmentMain(HomeFragment()) }
 

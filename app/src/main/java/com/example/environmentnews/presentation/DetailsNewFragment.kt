@@ -1,10 +1,8 @@
 package com.example.environmentnews.presentation
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -41,6 +39,11 @@ class DetailsNewFragment : Fragment() {
         val favoriteDao = AppDatabase.getDatabase(application).favoriteDao()
         val repository = MoreNewRepository(dao, favoriteDao)
         val viewModelFactoryNews = NewViewModelFactory(repository)
+
+        val window: Window = requireActivity().window
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.setStatusBarColor(requireActivity().resources.getColor(com.example.environmentnews.R.color.white))
 
         newViewModel = ViewModelProvider(this, viewModelFactoryNews).get(NewViewModel::class.java)
 
