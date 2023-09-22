@@ -11,4 +11,48 @@
     <string name="featured_tips">Featured Tips</string>
     <string name="popular_tips">Popular Tips</string>
     <string name="more_news">More News</string>
+
+    <!--Featured Tips-->
+    <string name="featured_title1">Modern Farming Plants</string>
+    <string name="featured_temp1">32°C</string>
+    <string name="featured_weather1">Light Rain</string>
+    <string name="featured_water1">85%</string>
+    <string name="featured_description">Various types of modern farming methods used nowadays include agribusiness and intensive farming techniques. These methods have significantly contributed to increasing farming productivity.
+
+Another important aspect of modern farming technology is the ability to regulate weather conditions within closed environments, such as greenhouses. This allows farmers to create optimal growing conditions for crops regardless of external weather conditions.
+
+Additionally, advanced farming technology also includes the use of specialized tools and equipment for measuring moisture levels in the soil. Accurate moisture measurement helps farmers efficiently manage irrigation and ensure proper hydration for their crops.
+
+Overall, the development of agriculture and farming technology has revolutionized the way farming is conducted, leading to higher productivity, improved efficiency, and more sustainable practices.</string>
+    <!--Featured Tips-->
+
+    <!--Popular Tips-->
+    <string name="popular_title">Waste Management: Caring for environmental health</string>
+    <string name="popular_desc">Waste management is a crucial aspect of caring for environmental health. As the world\'s population continues to grow and consumption rates increase, proper waste management becomes even more important. It involves the collection, transportation, processing, and disposal of waste materials in a way that minimizes their impact on the environment.
+
+One of the key goals of waste management is to reduce the amount of waste generated. This can be achieved through various strategies, such as promoting recycling and composting. Recycling allows materials such as paper, plastic, glass, and metal to be reused, reducing the need for raw materials and decreasing the energy required for manufacturing. Composting, on the other hand, involves the decomposition of organic waste into nutrient-rich soil, which can be used for gardening and agriculture.
+
+Proper waste disposal is another crucial aspect of waste management. Landfills are commonly used for disposing of non-recyclable and non-compostable waste. However, modern waste management practices aim to minimize the use of landfills and instead focus on alternative methods such as waste-to-energy plants. These plants convert waste into energy through processes like incineration or anaerobic digestion, reducing the volume of waste and generating electricity or heat in the process.
+
+Waste management also involves the safe handling and treatment of hazardous waste. Hazardous waste includes materials that are toxic, flammable, corrosive, or reactive. Improper disposal of hazardous waste can have severe consequences on human health and the environment. Therefore, it is crucial to have proper regulations and systems in place to ensure its safe collection, transportation, and treatment.
+
+In addition to reducing waste generation and proper disposal, waste management also involves raising awareness and educating the public about the importance of responsible waste management practices. Encouraging individuals to reduce, reuse, and recycle can significantly contribute to preserving the environment and maintaining its health for future generations.
+
+In conclusion, waste management plays a vital role in caring for environmental health. By implementing effective waste management practices, we can reduce the impact of waste on the environment, conserve resources, and promote a sustainable future. It is a collective responsibility, and by working together, we can make a significant difference in preserving our planet for generations to come.</string>
+    <!--Popular Tips-->
+
+    <!--More New-->
+    <string name="new_title1">Planting Tree: Plant one tree for a million benefits</string>
+    <string name="new_desc1">Trees are living creatures that play an important role in our lives and the environment. Planting a tree is not only an act of caring for nature, but also an investment in the future. One planted tree can bring us many benefits that extend far beyond its physical form.
+
+One of the main arguments in favor of planting trees is their ability of oxygen formation. Trees absorb carbon dioxide and release oxygen, which makes them indispensable for maintaining balance in the atmosphere. They are natural filters that improve the quality of the air we breathe. Thanks to trees, the level of air pollution can be reduced, which has a positive effect on the health of people and animals.
+
+Trees also play an important role in climate regulation. They create natural barriers from strong winds and protect from the negative effects of sunlight. In addition, they help to conserve water in the soil and prevent erosion. Trees also contribute to the cooling of the environment, which is especially important in urban areas where temperatures can be higher due to urban heat.
+
+In addition to environmental benefits, trees also offer economic benefits. Growing trees improve the appearance of the environment and increase the value of real estate. Studies show that the presence of green spaces around a home or workplace can increase its value and attractiveness to buyers or tenants. In addition, trees create shade and help reduce air conditioning costs during the hot summer months.
+
+But planting trees is not only the responsibility of the state or organizations, it is an action that each of us can perform. Even one planted tree can have a huge impact on the environment and our lives. We can start by planting a tree in our garden, on a plot or even on a balcony. Each tree has the potential to bring a million benefits, including air improvement, climate regulation and economic benefits.
+
+So let\'s turn our planet into a greener and healthier place to live together. Plant a tree and get a million benefits!</string>
+    <!--More New-->
 </resources>

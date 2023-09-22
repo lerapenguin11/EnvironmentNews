@@ -81,7 +81,7 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1500dp">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/title_featured_tips"
@@ -137,6 +137,7 @@
                             android:layout_height="147dp"
                             android:backgroundTint="#f8f8ec"
                             app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
 
@@ -165,14 +166,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent">
 
-                            <ImageView
-                                android:id="@+id/ic_save"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:src="@drawable/ic_save_not_click"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
                             <TextView
                                 android:id="@+id/tv_title_popular_tip"
                                 android:layout_width="0dp"
@@ -181,7 +174,6 @@
                                 android:fontFamily="@font/inter_semibold"
                                 android:textColor="@color/color2"
                                 android:textSize="17dp"
-                                app:layout_constraintEnd_toStartOf="@+id/ic_save"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
                                 tools:text="Waste Management: Caring for environmental health" />

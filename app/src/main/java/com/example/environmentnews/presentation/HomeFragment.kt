@@ -5,56 +5,72 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.environmentnews.R
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.environmentnews.business.database.AppDatabase
+import com.example.environmentnews.business.model.Constants
+import com.example.environmentnews.business.repos.MoreNewRepository
+import com.example.environmentnews.databinding.FragmentHomeBinding
+import com.example.environmentnews.presentation.adapter.FeaturedTipsAdapter
+import com.example.environmentnews.presentation.adapter.MoreNewAdapter
+import com.example.environmentnews.viewmodel.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    private var _binding : FragmentHomeBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var viewModel : FeaturedViewModel
+    private val adapter = FeaturedTipsAdapter()
+    private lateinit var newViewModel : NewViewModel
+    private lateinit var favoriteViewModel : FavoriteViewModel
+    private val newAdapter = MoreNewAdapter()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        viewModel = ViewModelProvider(requireActivity()).get(FeaturedViewModel::class.java)
+
+        val application = requireNotNull(this.activity).application
+        val dao = AppDatabase.getDatabase(application).newDao()
+        val favoriteDao = AppDatabase.getDatabase(application).favoriteDao()
+        val repository = MoreNewRepository(dao, favoriteDao)
+        val viewModelFactoryNews = NewViewModelFactory(repository)
+
+        newViewModel = ViewModelProvider(this, viewModelFactoryNews).get(NewViewModel::class.java)
+
+        val viewModelFactoryFav = FavoriteViewModelFactory(repository)
+        favoriteViewModel = ViewModelProvider(this, viewModelFactoryFav).get(FavoriteViewModel::class.java)
+
+        observeDataFeaturedTips()
+        setDataPopularTips()
+        observeDataNew()
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun observeDataNew() {
+        binding.rvMoreNew.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        binding.rvMoreNew.adapter = newAdapter
+
+        newViewModel.getResultNew().observe(viewLifecycleOwner, Observer {
+            newAdapter.setItem(it)
+        })
+    }
+
+    private fun setDataPopularTips() {
+        binding.iconTipPopular.setImageResource(Constants.getPopularTips().icon)
+        binding.tvTitlePopularTip.setText(Constants.getPopularTips().title)
+    }
+
+    private fun observeDataFeaturedTips() {
+        binding.rvFeaturedTips.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        binding.rvFeaturedTips.adapter = adapter
+
+        viewModel.getResultFeaturedTips().observe(viewLifecycleOwner, Observer {
+            adapter.setItem(it)
+        })
     }
 }
