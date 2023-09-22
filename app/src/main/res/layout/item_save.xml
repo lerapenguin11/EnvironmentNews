@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="167dp"
+    android:layout_marginBottom="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="98dp"
+        android:layout_height="147dp"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="#f8f8ec"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="98dp"
+            android:layout_height="147dp"
+            app:cardCornerRadius="8dp"
+            android:backgroundTint="#f8f8ec">
+
+            <ImageView
+                android:id="@+id/icon_new_save"
+                android:layout_width="98dp"
+                android:layout_height="147dp"
+                android:layout_gravity="bottom"
+                android:foregroundGravity="bottom"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                tools:srcCompat="@drawable/ic_new1" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ic_delete_save"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_save_click" />
+
+    <TextView
+        android:id="@+id/tv_save_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Collecting waste that is in nature"
+        android:textColor="@color/color1"
+        android:fontFamily="@font/inter_bold"
+        android:textSize="20sp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:lineHeight="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/ic_delete_save"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_save_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineHeight="24dp"
+        android:maxLines="2"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="#50555C"
+        android:fontFamily="@font/inter"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_save_title"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_save_title"
+        tools:text="Waste or garbage that is not managed properly will prod..." />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F5F5F5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
