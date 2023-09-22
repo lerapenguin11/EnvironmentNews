@@ -9,8 +9,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.environmentnews.R
 import com.example.environmentnews.business.model.MoreNew
+import com.example.environmentnews.presentation.adapter.listener.NewListener
 
-class MoreNewAdapter : RecyclerView.Adapter<MoreNewAdapter.MoreNewViewHolder>() {
+class MoreNewAdapter(private val listener : NewListener) : RecyclerView.Adapter<MoreNewAdapter.MoreNewViewHolder>() {
 
     private val newList = mutableListOf<MoreNew>()
 
@@ -27,6 +28,7 @@ class MoreNewAdapter : RecyclerView.Adapter<MoreNewAdapter.MoreNewViewHolder>() 
 
         holder.icon.setImageResource(new.icon)
         holder.title.setText(new.title)
+        holder.itemView.setOnClickListener { listener.getNew(new) }
 
         if (position == newList.size-1){
             holder.line.visibility = View.GONE

@@ -8,22 +8,25 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.environmentnews.R
 import com.example.environmentnews.business.database.AppDatabase
 import com.example.environmentnews.business.model.Constants
+import com.example.environmentnews.business.model.MoreNew
 import com.example.environmentnews.business.repos.MoreNewRepository
 import com.example.environmentnews.databinding.FragmentHomeBinding
 import com.example.environmentnews.presentation.adapter.FeaturedTipsAdapter
 import com.example.environmentnews.presentation.adapter.MoreNewAdapter
+import com.example.environmentnews.presentation.adapter.listener.NewListener
 import com.example.environmentnews.viewmodel.*
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), NewListener {
     private var _binding : FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel : FeaturedViewModel
     private val adapter = FeaturedTipsAdapter()
     private lateinit var newViewModel : NewViewModel
     private lateinit var favoriteViewModel : FavoriteViewModel
-    private val newAdapter = MoreNewAdapter()
+    private val newAdapter = MoreNewAdapter(this)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -72,5 +75,19 @@ class HomeFragment : Fragment() {
         viewModel.getResultFeaturedTips().observe(viewLifecycleOwner, Observer {
             adapter.setItem(it)
         })
+    }
+
+    override fun getNew(new: MoreNew) {
+        val bundle = Bundle()
+        bundle.putInt("title", new.title)
+        bundle.putInt("description", new.description)
+        bundle.putInt("icon", new.icon)
+        bundle.putInt("id", new.id)
+
+        val transaction = activity?.supportFragmentManager?.beginTransaction()
+        val fragment = DetailsNewFragment()
+        fragment.arguments = bundle
+        transaction?.replace(R.id.main_layout, fragment)
+        transaction?.commit()
     }
 }

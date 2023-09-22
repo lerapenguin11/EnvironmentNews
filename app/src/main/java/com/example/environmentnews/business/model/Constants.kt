@@ -28,6 +28,9 @@ object Constants {
         val new1 = MoreNew(0, R.string.new_title1, R.drawable.ic_new1, R.string.new_desc1)
         newList.add(new1)
 
+        val new2 = MoreNew(1, R.string.popular_title, R.drawable.ic_new1, R.string.new_desc1)
+        newList.add(new2)
+
         return newList
     }
 }
